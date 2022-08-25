@@ -64,6 +64,48 @@ variable "intra_subnet_ipv6_prefixes" {
   default     = []
 }
 
+variable "private_subnet_ipv6_cidrs" {
+  description = "A list of private IPv6 CIDRS inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
+variable "public_subnet_ipv6_cidrs" {
+  description = "A list of public IPv6 CIDRS inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
+variable "outpost_subnet_ipv6_cidrs" {
+  description = "A list of output IPv6 CIDRS inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
+variable "database_subnet_ipv6_cidrs" {
+  description = "A list of database IPv6 CIDRS inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
+variable "redshift_subnet_ipv6_cidrs" {
+  description = "A list of redshift IPv6 CIDRS inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
+variable "elasticache_subnet_ipv6_cidrs" {
+  description = "A list of elasticache IPv6 CIDRS inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
+variable "intra_subnet_ipv6_cidrs" {
+  description = "A list of infra IPv6 CIDRS inside the VPC"
+  type        = list(string)
+  default     = []
+}
+
 variable "assign_ipv6_address_on_creation" {
   description = "Assign IPv6 address on subnet, must be disabled to change IPv6 CIDRs. This is the IPv6 equivalent of map_public_ip_on_launch"
   type        = bool
